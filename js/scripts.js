@@ -1,30 +1,71 @@
 const idiomaNavegador = navigator.language || navigator.userLanguage;
 console.log(idiomaNavegador);
 
-/* script.js */
-const projectsData = {
+// Definimos proyectos para cada tecnología
+const projects = {
+    mysql: [
+        {
+            title: "Gestión de Inventarios",
+            description: "Sistema completo de gestión de inventarios usando MySQL para el backend.",
+            image: "path_to_image.jpg",
+            link: "#"
+        },
+        {
+            title: "Base de Datos de Clientes",
+            description: "Sistema de administración de clientes usando MySQL y PHP.",
+            image: "path_to_image.jpg",
+            link: "#"
+        }
+    ],
     html: [
-        { title: "Landing Page", desc: "A simple HTML landing page.", img: "html-landing.png", link: "#" },
-        { title: "Portfolio", desc: "Personal portfolio website.", img: "html-portfolio.png", link: "#" }
+        {
+            title: "Página Web Personal",
+            description: "Portafolio personal desarrollado completamente con HTML.",
+            image: "path_to_image.jpg",
+            link: "#"
+        },
+        {
+            title: "Landing Page",
+            description: "Página de aterrizaje para producto desarrollada en HTML.",
+            image: "path_to_image.jpg",
+            link: "#"
+        }
     ],
     css: [
-        { title: "CSS Animations", desc: "Cool animations using CSS.", img: "css-animations.png", link: "#" },
-        { title: "Responsive Design", desc: "A fully responsive website.", img: "css-responsive.png", link: "#" }
+        {
+            title: "Página de Empresa",
+            description: "Sitio web de empresa con un diseño responsivo y estilizado.",
+            image: "path_to_image.jpg",
+            link: "#"
+        },
+        {
+            title: "Página de Blog",
+            description: "Blog personal con estilo moderno y minimalista.",
+            image: "path_to_image.jpg",
+            link: "#"
+        }
     ],
     php: [
-        { title: "User Authentication", desc: "Login and signup system with PHP.", img: "php-auth.png", link: "#" },
-        { title: "Blog System", desc: "A simple blog with PHP and MySQL.", img: "php-blog.png", link: "#" }
-    ],
-    mysql: [
-        { title: "Database Management", desc: "Managing databases with MySQL.", img: "mysql-db.png", link: "#" },
-        { title: "Data Analysis", desc: "Performing queries and reports.", img: "mysql-analysis.png", link: "#" }
+        {
+            title: "Sistema de Gestión de Usuarios",
+            description: "Aplicación web en PHP para gestionar usuarios y permisos.",
+            image: "path_to_image.jpg",
+            link: "#"
+        },
+        {
+            title: "Aplicación de Noticias",
+            description: "Plataforma de noticias en línea desarrollada con PHP.",
+            image: "path_to_image.jpg",
+            link: "#"
+        }
     ]
 };
+
 
 function showProjects(tech) {
     const projectContainer = document.getElementById('projects');
     projectContainer.innerHTML = '';
-    
+
     projectsData[tech].forEach(project => {
         const projectElement = document.createElement('div');
         projectElement.classList.add('project');
