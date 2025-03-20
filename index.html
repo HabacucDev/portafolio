@@ -3,25 +3,89 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- Etiqueta para el idioma principal del sitio -->
+    <meta http-equiv="Content-Language" content="es">
+
+    <!-- Si tu sitio está disponible en múltiples idiomas -->
+    <link rel="alternate" hreflang="es" href="https://github.com/HabacucDev/portafolio/es">
+    <link rel="alternate" hreflang="en" href="https://github.com/HabacucDev/portafolio/en">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta title: Título de la página, esencial para SEO -->
     <meta name="title" content="Portafolio de Habacuc Developer - Desarrollador Fullstack">
-    
+
     <!-- Meta description: Descripción breve y concisa del contenido de la página -->
-    <meta name="description" content="Portafolio de Cristian, un desarrollador web apasionado por crear sitios responsivos y aplicaciones web innovadoras utilizando las tecnologías más modernas.">
-    
+    <meta name="description"
+        content="Portafolio de Cristian, un desarrollador web apasionado por crear sitios responsivos y aplicaciones web innovadoras utilizando las tecnologías más modernas.">
+
     <!-- Meta keywords: Palabras clave relevantes para SEO (aunque no es tan influyente como antes) -->
-    <meta name="keywords" content="Desarrollador web, portafolio, MySQL, JavaScript, React, Node.js, HTML, CSS, Frontend, Backend, fullstack">
-    
+    <meta name="keywords"
+        content="Desarrollador web, portafolio, MySQL, JavaScript, React, Node.js, HTML, CSS, Git, GitHub, Frontend, Backend, fullstack">
+
     <!-- Meta author: Especifica el autor de la página -->
     <meta name="author" content="Habacuc">
-    
+
     <!-- Meta robots: Controla cómo los motores de búsqueda indexan la página -->
     <meta name="robots" content="index, follow">
+
+    <!-- Prevenir cache de la página -->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+
+    <title>Portafolio de Desarrollador</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    
+
+    <div class="container">
+        <h1>Developer Portfolio</h1>
+        <div class="buttons">
+            <button onclick="showProjects('html')">HTML</button>
+            <button onclick="showProjects('css')">CSS</button>
+            <button onclick="showProjects('php')">PHP</button>
+            <button onclick="showProjects('mysql')">MySQL</button>
+        </div>
+        <div id="projects" class="projects"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Habacuc Developer",
+                "jobTitle": "Desarrollador Web Full-Stack",
+                "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Bogotá",
+                "addressCountry": "Colombia"
+                },
+                "telephone": "+57 310 872 7246",
+                "url": "https://github.com/HabacucDev/portafolio",
+                "email": "TU_EMAIL",
+                "sameAs": [
+                "https://www.linkedin.com/in/cristian-camilo-ruiz-ospina-tecnico/",
+                "https://github.com/HabacucDev",
+                "URL_DE_TU_PERFIL_DE_OTRAS_REDES"
+                ],
+                "knowsAbout": [
+                "Desarrollo Web Full-Stack",
+                "MySQL"
+                "Git",
+                "GitHub",
+                "JavaScript",
+                "React",
+                "Node.js",
+                "HTML5",
+                "CSS3"
+                ],
+                "description": "Desarrollador web full-stack con experiencia en ["MySQL", "Git","GitHub","JavaScript", "React", "Node.js", "HTML5", "CSS3"]. Especializado en la creación de aplicaciones web modernas y eficientes."
+            }
+            </script>
 </body>
 
 </html>
