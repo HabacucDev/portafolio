@@ -78,3 +78,6 @@ function showProjects(tech) {
         projectContainer.appendChild(projectElement);
     });
 }
+
+// Actualizar el año en el footer
+document.getElementById("current-year").textContent = new Date().getFullYear();
